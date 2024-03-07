@@ -27,6 +27,7 @@
   background-color: transparent;
   border-color: transparent;
   color: white;
+  text-decoration: none;
 }
 
 .u-section-1 .u-list-2 {
@@ -85,6 +86,7 @@
   .u-section-1 .u-btn-1 {
     padding: 10px 40px 10px 40px;
   }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -110,11 +112,15 @@
   border-style: solid;
   margin: 0 auto;
   width: 240px;
-  height: 80px;
+  height: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background-color: transparent;
   color: white;
   border-color: white;
   border-width: 5px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .u-section-1 .u-list-3 {
@@ -127,12 +133,19 @@
 }
 
 @media screen and (max-width: 800px) {
+  .u-section-1 .u-list-1 {
+    display: none;
+  }
+
   .u-section-1 .u-btn-2 {
     width: 200px;
-    height: 60px;
+    height: auto;
     font-size: 30px;
     border-width: 4px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
+
   .u-section-1 .u-list-3 {
     flex-direction: column;
     width: auto;
@@ -141,6 +154,63 @@
     padding-bottom: 0;
     justify-content: space-evenly;
   }
+}
+
+@media screen and (min-width: 800px) {
+  .u-section-1 .u-btn-3 {
+    display: none;
+  }
+}
+
+.u-section-1 .u-btn-3 {
+  font-size: 40px;
+  color: white;
+  font-weight: 700;
+  border-color: transparent;
+  margin: 60px 20px;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: "Inria Sans";
+  font-weight: 700;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 
 .u-section-2 {
@@ -214,6 +284,7 @@
 }
 
 @media screen and (max-width: 800px) {
+
   .u-section-3 .u-list-4 {
     flex-direction: column;
     align-content: center;
@@ -239,6 +310,7 @@
   .u-section-3 .u-image-2 {
     margin: 0 auto;
   }
+
 }
 
 
