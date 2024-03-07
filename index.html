@@ -9,7 +9,7 @@
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Sans:300,300i,400,400i,700,700i|Itim:400|Inria+Serif:300,300i,400,400i,700,700i">
     
 </head>
-  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en" onload="startTimer()">
 
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -58,7 +58,10 @@
         <div class="u-container-layout-2">
           <h4 class="u-text-3"> Best Se<span style="font-weight: 700;"></span>llers
           </h4>
-          <img class="u-image-2" src="images/bread.png" alt="Strawberry frosted rolls">
+          <div class="u-container-layout-3">
+            <img class="u-image-2" src="images/item1.png" alt="Strawberry frosted rolls" id="img">
+            <div class="u-image-2-title" id="title">Strawberry Frosted Rolls</div>
+          </div>
         </div>
       </div>
     </div>
@@ -71,6 +74,28 @@
     function closeNav() {
       document.getElementById("myNav").style.width = "0%";
     }
+
+    var images = [], x = -1;
+    images[0] = "images/item1.png";
+    images[1] = "images/item2.png";
+    images[2] = "images/item3.png"
+    
+    var titles = []
+    titles[0] = "Strawberry Frosted Rolls"
+    titles[1] = "Focaccia Sandwiches"
+    titles[2] = "Hot Chocolate Scones"
+
+    function displayNextImage() {
+      x = (x === images.length - 1) ? 0 : x + 1;
+      document.getElementById("img").src = images[x];
+      document.getElementById("title").textContent = titles[x];
+    }
+
+    function startTimer() {
+      setInterval(displayNextImage, 3000);
+    }
+
+    
   </script>
   
 </body></html>
